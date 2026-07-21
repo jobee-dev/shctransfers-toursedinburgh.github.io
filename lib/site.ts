@@ -12,7 +12,7 @@ export const siteConfig = {
   shortName: "Stevie Craig",
   descriptor: "Private Hires & Tours",
   description:
-    "Edinburgh private hire, airport transfers, longer journeys and bespoke tours, arranged directly with Stevie.",
+    "Private hire across Edinburgh and beyond, including airport transfers, longer journeys and bespoke tours.",
   origin: hasPublicOrigin
     ? configuredOrigin
     : "https://preview.steviecraig.example",

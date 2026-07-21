@@ -99,8 +99,8 @@ export function SiteFooter() {
         <div>
           <Brand />
           <p>
-            Edinburgh private hire, airport transfers, longer journeys and
-            bespoke tours, arranged directly with Stevie.
+            Private hire across Edinburgh and beyond, including airport
+            transfers, longer journeys and bespoke tours.
           </p>
         </div>
         <div className="footer-nav">
@@ -112,7 +112,7 @@ export function SiteFooter() {
           ))}
         </div>
         <div className="footer-contact">
-          <p className="footer-label">Arrange a journey</p>
+          <p className="footer-label">Book by WhatsApp</p>
           <WhatsAppLink compact>Message Stevie</WhatsAppLink>
           {!siteConfig.whatsappReady && (
             <p className="pending-note">

@@ -2,11 +2,11 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 const routes = [
-  ["/", "Edinburgh Private Hire &amp; Bespoke Tours", "Edinburgh journeys"],
+  ["/", "Edinburgh Private Hire &amp; Bespoke Tours", "Private hire across"],
   ["/private-hire", "Private Hire in Edinburgh and Beyond", "From city streets"],
   ["/airport-transfers", "Edinburgh Airport Transfers", "A clearer start"],
   ["/tours", "Bespoke Tours from Edinburgh", "See more"],
-  ["/contact", "Contact Stevie Craig", "Every booking starts"],
+  ["/contact", "Contact Stevie Craig", "Book by WhatsApp"],
 ];
 
 const workerUrl = new URL("../dist/server/index.js", import.meta.url);

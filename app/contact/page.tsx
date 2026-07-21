@@ -14,10 +14,10 @@ export default function ContactPage() {
     <section className="contact-page page-width">
       <div className="contact-page__intro">
         <p className="eyebrow">Contact Stevie</p>
-        <h1>Every booking starts with a conversation.</h1>
+        <h1>Book by WhatsApp.</h1>
         <p>
-          Send the journey details on WhatsApp. Stevie will organise the
-          practical arrangements with you directly.
+          Send the journey details to check availability, get a quote and book
+          with Stevie.
         </p>
       </div>
 

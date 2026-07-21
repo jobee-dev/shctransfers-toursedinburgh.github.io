@@ -10,7 +10,7 @@ import {
 export const metadata: Metadata = pageMetadata({
   title: "Edinburgh Private Hire & Bespoke Tours",
   description:
-    "Arrange Edinburgh private hire, airport transfers, longer journeys and bespoke tours directly with Stevie Craig on WhatsApp.",
+    "Book Edinburgh private hire, airport transfers, longer journeys and bespoke tours with Stevie Craig by WhatsApp.",
   path: "/",
 });
 
@@ -18,7 +18,7 @@ const services = [
   {
     number: "01",
     title: "Private hire",
-    text: "Pre-arranged journeys across Edinburgh and beyond, planned around where you need to be.",
+    text: "Private hire for journeys across Edinburgh and longer trips beyond the city.",
     href: "/private-hire",
   },
   {
@@ -82,15 +82,15 @@ export default function Home() {
         <div className="home-hero__shade" />
         <div className="home-hero__content page-width">
           <p className="eyebrow eyebrow--gold">
-            Edinburgh · Private hire · Bespoke tours
+            Edinburgh · Airport transfers · Tours
           </p>
           <h1>
-            Edinburgh journeys,
-            <br /> personally arranged.
+            Private hire across
+            <br /> Edinburgh and beyond.
           </h1>
           <p className="home-hero__intro">
-            Private hire across Edinburgh and beyond, airport transfers and
-            bespoke tours — arranged directly with Stevie.
+            Local journeys, Edinburgh Airport transfers, longer-distance
+            travel and bespoke tours. Message Stevie on WhatsApp to book.
           </p>
           <div className="hero-actions">
             <WhatsAppLink />
@@ -106,28 +106,26 @@ export default function Home() {
         </div>
         <div className="home-hero__facts" aria-label="Service summary">
           <div className="page-width home-hero__facts-inner">
-            <p>Edinburgh based</p>
-            <p>Journeys beyond the city</p>
-            <p>Tours made around you</p>
+            <p>Edinburgh private hire</p>
+            <p>Airport transfers</p>
+            <p>Longer trips and tours</p>
           </div>
         </div>
       </section>
 
       <section className="intro-section page-width" id="services">
         <div className="intro-section__heading">
-          <p className="eyebrow">A personal service</p>
-          <h2>One driver. Every detail arranged with you.</h2>
+          <p className="eyebrow">Private hire services</p>
+          <h2>Local journeys, airport runs and longer trips.</h2>
         </div>
         <div className="intro-section__copy">
           <p className="lead">
-            Speak to Stevie directly from the first message. Explain the
-            journey you have in mind, and agree the practical details before
-            you travel.
+            Message Stevie directly to check availability, get a quote and
+            book your journey.
           </p>
           <p>
-            Whether it is a journey within Edinburgh, a planned airport
-            transfer, travel beyond the city or time set aside to explore,
-            everything starts with a straightforward conversation.
+            Send your pickup point, destination, preferred date and time, and
+            passenger numbers on WhatsApp. Stevie will reply with the details.
           </p>
         </div>
       </section>
@@ -157,11 +155,10 @@ export default function Home() {
         </div>
         <div className="image-statement__copy">
           <p className="eyebrow eyebrow--gold">Edinburgh and beyond</p>
-          <h2>Travel that starts with your plans.</h2>
+          <h2>Tell Stevie where and when.</h2>
           <p>
-            There is no online booking maze and no form to complete. Send the
-            essentials on WhatsApp and arrange the journey directly with the
-            person who will be driving.
+            There is no form to complete. Send the pickup, destination, date,
+            time and passenger numbers on WhatsApp to check availability.
           </p>
           <Link href="/private-hire" className="text-link text-link--light">
             About private hire <span aria-hidden="true">→</span>
@@ -185,15 +182,15 @@ export default function Home() {
           <li>
             <span>02</span>
             <div>
-              <h3>Agree the journey</h3>
-              <p>Confirm the practical details directly with Stevie.</p>
+              <h3>Check availability</h3>
+              <p>Stevie will reply with availability and the journey details.</p>
             </div>
           </li>
           <li>
             <span>03</span>
             <div>
-              <h3>Travel as arranged</h3>
-              <p>Meet at the agreed place and time for your journey.</p>
+              <h3>Confirm the booking</h3>
+              <p>Confirm the pickup place and time, then you are ready to go.</p>
             </div>
           </li>
         </ol>
@@ -215,8 +212,8 @@ export default function Home() {
       </section>
 
       <FinalCta
-        title="Tell Stevie where you need to go."
-        body="Send your pickup point, destination or tour idea, preferred date and passenger numbers. Stevie will organise the details with you on WhatsApp."
+        title="Ready to book?"
+        body="Send your pickup point, destination or tour idea, preferred date and passenger numbers. Stevie will reply on WhatsApp."
       />
     </>
   );
