@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { FinalCta, PageHero } from "@/components/site-shell";
+import { PageHero } from "@/components/site-shell";
 import { pageMetadata } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
@@ -74,12 +74,6 @@ export default function PrivateHirePage() {
         </Link>
       </section>
 
-      <FinalCta
-        eyebrow="Private hire"
-        title="Book your journey"
-        body="Send the pickup, destination, date, time and passenger numbers on WhatsApp."
-        kind="privateHire"
-      />
     </>
   );
 }

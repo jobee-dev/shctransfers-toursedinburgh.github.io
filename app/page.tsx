@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { FinalCta, WhatsAppLink } from "@/components/site-shell";
+import { WhatsAppLink } from "@/components/site-shell";
 import {
   pageMetadata,
   siteConfig,
@@ -36,7 +36,7 @@ const faqs = [
   {
     question: "How do I book a journey?",
     answer:
-      "Send Stevie a WhatsApp message with your pickup point, destination, preferred date and time, and number of passengers. The details can then be agreed directly with you.",
+      "Message me on WhatsApp with your pickup point, destination, preferred date and time, and number of passengers. I’ll reply with availability and a quote.",
   },
   {
     question: "Can I arrange travel beyond Edinburgh?",
@@ -87,7 +87,7 @@ export default function Home() {
           </h1>
           <p className="home-hero__intro">
             Local journeys, Edinburgh Airport transfers, longer-distance
-            travel and bespoke tours. Message Stevie on WhatsApp to book.
+            travel and bespoke tours. Message me on WhatsApp to book.
           </p>
           <div className="hero-actions">
             <WhatsAppLink />
@@ -143,10 +143,6 @@ export default function Home() {
         </div>
       </section>
 
-      <FinalCta
-        title="Book by WhatsApp"
-        body="Send your pickup, destination, date and passenger numbers. Stevie will reply with availability and a quote."
-      />
     </>
   );
 }

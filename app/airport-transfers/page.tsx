@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { FinalCta, PageHero } from "@/components/site-shell";
+import { PageHero } from "@/components/site-shell";
 import { pageMetadata } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
@@ -36,7 +36,7 @@ export default function AirportTransfersPage() {
             </p>
             <p>
               For an arrival, include the flight number and scheduled landing
-              time. Stevie will reply with availability and pickup details.
+              time. I’ll reply with availability and pickup details.
             </p>
           </div>
         </div>
@@ -59,12 +59,6 @@ export default function AirportTransfersPage() {
         </Link>
       </section>
 
-      <FinalCta
-        eyebrow="Airport transfers"
-        title="Book by WhatsApp"
-        body="Send your date, time, flight number, address and passenger numbers."
-        kind="airport"
-      />
     </>
   );
 }

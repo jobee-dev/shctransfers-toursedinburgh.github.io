@@ -24,7 +24,7 @@ type WhatsAppLinkProps = {
 export function WhatsAppLink({
   kind = "general",
   className = "button button--gold",
-  children = "Message Stevie on WhatsApp",
+  children = "Message me on WhatsApp",
   compact = false,
 }: WhatsAppLinkProps) {
   const external = siteConfig.whatsappReady;
@@ -67,9 +67,6 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <WhatsAppLink className="header-booking" compact>
-          WhatsApp
-        </WhatsAppLink>
         <details className="mobile-menu">
           <summary>
             <span>Menu</span>
@@ -81,7 +78,6 @@ export function SiteHeader() {
                 {item.label}
               </Link>
             ))}
-            <WhatsAppLink compact>WhatsApp booking</WhatsAppLink>
           </nav>
         </details>
       </div>
@@ -107,15 +103,6 @@ export function SiteFooter() {
               {item.label}
             </Link>
           ))}
-        </div>
-        <div className="footer-contact">
-          <p className="footer-label">Book by WhatsApp</p>
-          <WhatsAppLink compact>Message Stevie</WhatsAppLink>
-          {!siteConfig.whatsappReady && (
-            <p className="pending-note">
-              <span aria-hidden="true" /> WhatsApp number pending
-            </p>
-          )}
         </div>
       </div>
       <div className="site-footer__bottom page-width">
@@ -170,49 +157,5 @@ export function PageHero({
         />
       </div>
     </section>
-  );
-}
-
-type FinalCtaProps = {
-  eyebrow?: string;
-  title: string;
-  body: string;
-  kind?: BookingKind;
-};
-
-export function FinalCta({
-  eyebrow = "Start with a message",
-  title,
-  body,
-  kind = "general",
-}: FinalCtaProps) {
-  return (
-    <section className="final-cta">
-      <div className="page-width final-cta__inner">
-        <div>
-          <p className="eyebrow eyebrow--gold">{eyebrow}</p>
-          <h2>{title}</h2>
-        </div>
-        <div>
-          <p>{body}</p>
-          <WhatsAppLink kind={kind} />
-          {!siteConfig.whatsappReady && (
-            <p className="pending-note pending-note--light">
-              <span aria-hidden="true" /> WhatsApp number pending
-            </p>
-          )}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-export function MobileBookingBar() {
-  return (
-    <div className="mobile-booking-bar">
-      <WhatsAppLink compact>
-        {siteConfig.whatsappReady ? "Message Stevie" : "WhatsApp pending"}
-      </WhatsAppLink>
-    </div>
   );
 }

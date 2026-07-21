@@ -1,9 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import {
-  MobileBookingBar,
-  SiteFooter,
-  SiteHeader,
-} from "@/components/site-shell";
+import { SiteFooter, SiteHeader } from "@/components/site-shell";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
@@ -42,7 +38,6 @@ export default function RootLayout({
         <SiteHeader />
         <main id="main-content">{children}</main>
         <SiteFooter />
-        <MobileBookingBar />
       </body>
     </html>
   );

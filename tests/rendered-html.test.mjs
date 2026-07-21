@@ -40,7 +40,7 @@ for (const [pathname, title, heading] of routes) {
     assert.match(html, new RegExp(`<title>${title}.*Stevie Craig<\\/title>`, "i"));
     assert.match(html, new RegExp(heading, "i"));
     assert.match(html, /<meta name="robots" content="noindex, nofollow, noarchive"/i);
-    assert.match(html, /Message Stevie/i);
+    assert.match(html, /Message me/i);
     assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);
   });
 }

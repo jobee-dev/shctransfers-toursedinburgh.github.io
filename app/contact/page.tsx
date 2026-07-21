@@ -13,11 +13,11 @@ export default function ContactPage() {
   return (
     <section className="contact-page page-width">
       <div className="contact-page__intro">
-        <p className="eyebrow">Contact Stevie</p>
+        <p className="eyebrow">Contact me</p>
         <h1>Book by WhatsApp.</h1>
         <p>
           Send the journey details to check availability, get a quote and book
-          with Stevie.
+          with me.
         </p>
       </div>
 
@@ -31,8 +31,8 @@ export default function ContactPage() {
           </h2>
           <p>
             {siteConfig.whatsappReady
-              ? "Use the button below to open a pre-filled message to Stevie. Add your journey details before sending."
-              : "The site is currently a private preview. Stevie’s real WhatsApp number will be added here before the public launch."}
+              ? "Use the button below to open a pre-filled message to me. Add your journey details before sending."
+              : "The site is currently a private preview. My real WhatsApp number will be added here before the public launch."}
           </p>
           <WhatsAppLink />
           {!siteConfig.whatsappReady && (

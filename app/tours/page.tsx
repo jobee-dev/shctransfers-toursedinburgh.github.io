@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { FinalCta, PageHero } from "@/components/site-shell";
+import { PageHero } from "@/components/site-shell";
 import { pageMetadata } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
@@ -36,7 +36,7 @@ export default function ToursPage() {
             </p>
             <p>
               Send your interests, starting point and preferred date on
-              WhatsApp. Stevie will reply with what is possible.
+              WhatsApp. I’ll reply with what is possible.
             </p>
           </div>
         </div>
@@ -59,12 +59,6 @@ export default function ToursPage() {
         </Link>
       </section>
 
-      <FinalCta
-        eyebrow="Private tours"
-        title="Ask about a tour"
-        body="Send your preferred date, starting point, interests and passenger numbers."
-        kind="tour"
-      />
     </>
   );
 }
