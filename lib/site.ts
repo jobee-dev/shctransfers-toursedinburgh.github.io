@@ -115,6 +115,9 @@ type PageMetadataInput = {
   description: string;
   path: `/${string}`;
   absoluteTitle?: boolean;
+  shareTitle?: string;
+  shareImagePath?: `/${string}`;
+  shareImageAlt?: string;
 };
 
 export function pageMetadata({
@@ -122,9 +125,12 @@ export function pageMetadata({
   description,
   path,
   absoluteTitle = false,
+  shareTitle = title,
+  shareImagePath = "/og.jpg",
+  shareImageAlt = siteConfig.name,
 }: PageMetadataInput): Metadata {
   const absoluteUrl = sitePageUrl(path);
-  const shareImage = siteUrl("/og.jpg");
+  const shareImage = siteUrl(shareImagePath);
 
   return {
     title: absoluteTitle ? { absolute: title } : title,
@@ -145,14 +151,14 @@ export function pageMetadata({
       type: "website",
       locale: "en_GB",
       siteName: siteConfig.name,
-      title,
+      title: shareTitle,
       description,
       url: absoluteUrl,
-      images: [{ url: shareImage, width: 1200, height: 630, alt: siteConfig.name }],
+      images: [{ url: shareImage, width: 1200, height: 630, alt: shareImageAlt }],
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: shareTitle,
       description,
       images: [shareImage],
     },

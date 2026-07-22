@@ -16,6 +16,10 @@ export const metadata: Metadata = pageMetadata({
     "Book Edinburgh private hire, airport transfers, longer journeys and bespoke tours with Stevie Craig by WhatsApp.",
   path: "/",
   absoluteTitle: true,
+  shareTitle: "Private Hire and Airport Transfers from Edinburgh",
+  shareImagePath: "/og-edinburgh-private-hire.jpg",
+  shareImageAlt:
+    "View over Edinburgh towards Arthur's Seat in warm evening light",
 });
 
 const services = [

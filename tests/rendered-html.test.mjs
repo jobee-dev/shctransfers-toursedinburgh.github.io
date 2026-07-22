@@ -108,6 +108,26 @@ test("production robots allow crawling and advertise the sitemap", async () => {
   );
 });
 
+test("home advertises transport-focused WhatsApp and social preview metadata", async () => {
+  const response = await render("/");
+  const html = await response.text();
+
+  assert.match(
+    html,
+    /<meta property="og:title" content="Private Hire and Airport Transfers from Edinburgh"/i,
+  );
+  assert.match(
+    html,
+    /<meta name="twitter:title" content="Private Hire and Airport Transfers from Edinburgh"/i,
+  );
+  assert.match(
+    html,
+    /https:\/\/shctransfers-toursedinburgh\.com\/og-edinburgh-private-hire\.jpg/i,
+  );
+  assert.match(html, /<meta property="og:image:width" content="1200"/i);
+  assert.match(html, /<meta property="og:image:height" content="630"/i);
+});
+
 test("llms.txt describes the public services without unsupported claims", async () => {
   const llms = await readFile(
     new URL("../public/llms.txt", import.meta.url),
