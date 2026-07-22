@@ -76,6 +76,7 @@ for (const [pathname, title, heading, bookingMessage] of routes) {
       ),
     );
     assert.match(html, /Message me/i);
+    assert.match(html, /up to 8 passengers/i);
     assert.match(html, /data-primary-booking-cta/i);
     assert.match(html, /mobile-booking-bar/i);
     assert.match(html, /href="tel:\+447528862843"/i);
@@ -140,6 +141,7 @@ test("llms.txt describes the public services without unsupported claims", async 
   assert.match(llms, /https:\/\/shctransfers-toursedinburgh\.com\/tours\//i);
   assert.match(llms, /\+44 7528 862843/);
   assert.match(llms, /stevenjamescraig39@gmail\.com/i);
+  assert.match(llms, /up to 8 passengers/i);
   assert.doesNotMatch(llms, /licensed|24\/7|guaranteed|fixed price/i);
 });
 

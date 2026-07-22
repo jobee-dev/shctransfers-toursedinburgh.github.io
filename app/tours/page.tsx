@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Private Tours from Edinburgh",
   description:
-    "Discuss a bespoke Edinburgh or Scotland tour with Stevie Craig, shaped around your interests, timing and preferred pace.",
+    "Discuss a bespoke Edinburgh or Scotland tour for up to 8 passengers, shaped around your interests, timing and preferred pace.",
   path: "/tours",
 });
 
@@ -32,7 +32,7 @@ export default function ToursPage() {
           <div className="two-column-copy">
             <p className="lead">
               Tours are based on the places you want to see and the time you
-              have available.
+              have available, with room for up to 8 passengers.
             </p>
             <p>
               Send your interests, starting point and preferred date on

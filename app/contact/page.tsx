@@ -22,7 +22,8 @@ export default function ContactPage() {
         <h1>Contact Stevie.</h1>
         <p>
           WhatsApp is the quickest way to send journey details, check
-          availability and get a quote. You can also call or email me directly.
+          availability and get a quote for up to 8 passengers. You can also
+          call or email me directly.
         </p>
         <div
           className="contact-page__direct"

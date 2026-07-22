@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Edinburgh Airport Transfers",
   description:
-    "Arrange an Edinburgh Airport pickup or drop-off directly with Stevie Craig, with your journey details agreed in advance.",
+    "Arrange an Edinburgh Airport pickup or drop-off for up to 8 passengers directly with Stevie Craig.",
   path: "/airport-transfers",
 });
 
@@ -36,7 +36,8 @@ export default function AirportTransfersPage() {
             </p>
             <p>
               For an arrival, include the flight number and scheduled landing
-              time. I’ll reply with availability and pickup details.
+              time. The vehicle can carry up to 8 passengers. I’ll reply with
+              availability and pickup details.
             </p>
           </div>
         </div>

@@ -13,7 +13,7 @@ import {
 export const metadata: Metadata = pageMetadata({
   title: "Private Hire and Airport Transfers from Edinburgh",
   description:
-    "Book Edinburgh private hire, airport transfers, longer journeys and bespoke tours with Stevie Craig by WhatsApp.",
+    "Book Edinburgh private hire, airport transfers, longer journeys and bespoke tours for up to 8 passengers with Stevie Craig by WhatsApp.",
   path: "/",
   absoluteTitle: true,
   shareTitle: "Private Hire and Airport Transfers from Edinburgh",
@@ -50,6 +50,10 @@ const faqs = [
     question: "Can I arrange travel beyond Edinburgh?",
     answer:
       "Yes. The service is based in Edinburgh and longer journeys beyond the city can be discussed and arranged in advance.",
+  },
+  {
+    question: "How many passengers can you take?",
+    answer: "The vehicle can carry up to 8 passengers.",
   },
   {
     question: "Are tours based on a fixed itinerary?",
@@ -99,7 +103,8 @@ export default function Home() {
           </h1>
           <p className="home-hero__intro">
             Local journeys, Edinburgh Airport transfers, longer-distance
-            travel and bespoke tours. Message me on WhatsApp to book.
+            travel and bespoke tours for up to 8 passengers. Message me on
+            WhatsApp to book.
           </p>
           <div className="hero-actions" data-primary-booking-cta>
             <WhatsAppLink />

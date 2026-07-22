@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Private Hire in Edinburgh and Beyond",
   description:
-    "Arrange pre-booked private hire across Edinburgh and longer journeys beyond the city directly with Stevie Craig.",
+    "Arrange pre-booked private hire for up to 8 passengers across Edinburgh and beyond directly with Stevie Craig.",
   path: "/private-hire",
 });
 
@@ -32,7 +32,7 @@ export default function PrivateHirePage() {
           <div className="two-column-copy">
             <p className="lead">
               Book a pickup within Edinburgh or a longer journey beyond the
-              city.
+              city for up to 8 passengers.
             </p>
             <p>
               Send the pickup, destination, date, time and number of passengers

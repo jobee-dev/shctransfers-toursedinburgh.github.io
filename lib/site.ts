@@ -40,7 +40,7 @@ export const siteConfig = {
   shortName: "Stevie Craig",
   descriptor: "Private Hires & Tours",
   description:
-    "Private hire across Edinburgh and beyond, including airport transfers, longer journeys and bespoke tours.",
+    "Private hire for up to 8 passengers across Edinburgh and beyond, including airport transfers, longer journeys and bespoke tours.",
   origin,
   basePath,
   whatsappNumber: configuredWhatsApp,
