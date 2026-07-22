@@ -82,7 +82,8 @@ for (const [pathname, title, heading, bookingMessage] of routes) {
     assert.match(html, /data-primary-booking-cta/i);
     assert.match(html, /mobile-booking-bar/i);
     assert.match(html, /href="tel:\+447528862843"/i);
-    assert.match(html, /stevenjamescraig39@gmail\.com/i);
+    assert.match(html, /shctransfers\.tours@gmail\.com/i);
+    assert.doesNotMatch(html, /stevenjamescraig39@gmail\.com/i);
     assert.match(html, /href="https:\/\/wa\.me\/447528862843\?text=/i);
     const whatsappHref = html.match(
       /href="(https:\/\/wa\.me\/447528862843\?text=[^"]+)"/i,
@@ -142,7 +143,8 @@ test("llms.txt describes the public services without unsupported claims", async 
   assert.match(llms, /https:\/\/shctransfers-toursedinburgh\.com\/airport-transfers\//i);
   assert.match(llms, /https:\/\/shctransfers-toursedinburgh\.com\/tours\//i);
   assert.match(llms, /\+44 7528 862843/);
-  assert.match(llms, /stevenjamescraig39@gmail\.com/i);
+  assert.match(llms, /shctransfers\.tours@gmail\.com/i);
+  assert.doesNotMatch(llms, /stevenjamescraig39@gmail\.com/i);
   assert.match(llms, /up to 8 passengers/i);
   assert.doesNotMatch(llms, /licensed|24\/7|guaranteed|fixed price/i);
 });
@@ -171,6 +173,6 @@ test("home includes truthful service structured data", async () => {
   assert.match(html, /TaxiService/);
   assert.match(html, /FAQPage/);
   assert.match(html, /Edinburgh/);
-  assert.match(html, /stevenjamescraig39@gmail\\u002ecom|stevenjamescraig39@gmail\.com/i);
+  assert.match(html, /shctransfers\\u002etours@gmail\\u002ecom|shctransfers\.tours@gmail\.com/i);
   assert.doesNotMatch(html, /aggregateRating|priceRange|openingHours/i);
 });

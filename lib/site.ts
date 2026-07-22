@@ -46,7 +46,7 @@ export const siteConfig = {
   whatsappNumber: configuredWhatsApp,
   whatsappReady: hasWhatsAppNumber,
   phoneDisplay: "+44 7528 862843",
-  email: "stevenjamescraig39@gmail.com",
+  email: "shctransfers.tours@gmail.com",
   areaServed: "Edinburgh and journeys beyond the city",
   routes: ["/", "/private-hire", "/airport-transfers", "/tours", "/contact"],
   bookingMessages: {
