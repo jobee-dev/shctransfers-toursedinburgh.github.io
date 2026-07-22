@@ -12,8 +12,8 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   applicationName: siteConfig.name,
   icons: {
-    icon: siteUrl("/icon.png"),
-    shortcut: siteUrl("/icon.png"),
+    icon: [{ url: siteUrl("/icon.svg"), type: "image/svg+xml" }],
+    shortcut: [{ url: siteUrl("/icon.svg"), type: "image/svg+xml" }],
     apple: siteUrl("/apple-icon.png"),
   },
 };
