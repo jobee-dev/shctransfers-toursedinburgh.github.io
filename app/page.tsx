@@ -11,7 +11,7 @@ import {
 } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Edinburgh Private Hire & Airport Transfers | Stevie Craig",
+  title: "Private Hire and Airport Transfers from Edinburgh",
   description:
     "Book Edinburgh private hire, airport transfers, longer journeys and bespoke tours with Stevie Craig by WhatsApp.",
   path: "/",

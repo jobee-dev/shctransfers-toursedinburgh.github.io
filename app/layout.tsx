@@ -7,7 +7,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(`${siteConfig.origin}/`),
   title: {
-    default: "Edinburgh Private Hire & Tours | Stevie Craig",
+    default: "Private Hire and Airport Transfers from Edinburgh",
     template: "%s | Stevie Craig",
   },
   description: siteConfig.description,

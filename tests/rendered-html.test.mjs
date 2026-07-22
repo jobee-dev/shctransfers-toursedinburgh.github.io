@@ -5,7 +5,7 @@ import test from "node:test";
 const routes = [
   [
     "/",
-    "Edinburgh Private Hire &amp; Airport Transfers | Stevie Craig",
+    "Private Hire and Airport Transfers from Edinburgh",
     "Private hire across",
     "Hi Stevie, I'd like to arrange a journey.",
   ],
@@ -23,7 +23,7 @@ const routes = [
   ],
   [
     "/tours",
-    "Bespoke Tours from Edinburgh | Stevie Craig",
+    "Private Tours from Edinburgh | Stevie Craig",
     "Private tours from Edinburgh",
     "Hi Stevie, I'd like to discuss a private tour.",
   ],

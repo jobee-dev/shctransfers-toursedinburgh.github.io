@@ -4,7 +4,7 @@ import { PageHero } from "@/components/site-shell";
 import { pageMetadata } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Bespoke Tours from Edinburgh",
+  title: "Private Tours from Edinburgh",
   description:
     "Discuss a bespoke Edinburgh or Scotland tour with Stevie Craig, shaped around your interests, timing and preferred pace.",
   path: "/tours",
