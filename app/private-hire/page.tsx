@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Private Hire in Edinburgh and Beyond",
   description:
-    "Arrange pre-booked private hire for up to 8 passengers across Edinburgh and beyond directly with Stevie Craig.",
+    "Arrange pre-booked private hire for up to 8 passengers across Edinburgh and beyond with SHC Transfers & Tours.",
   path: "/private-hire",
 });
 

@@ -36,8 +36,8 @@ const basePath = /^\/(?:[a-z0-9._~-]+(?:\/[a-z0-9._~-]+)*)?$/i.test(
 const hasWhatsAppNumber = /^\d{8,15}$/.test(configuredWhatsApp);
 
 export const siteConfig = {
-  name: "Stevie Craig Private Hires and Tours",
-  shortName: "Stevie Craig",
+  name: "SHC Transfers & Tours",
+  shortName: "SHC Transfers & Tours",
   descriptor: "Private Hires & Tours",
   description:
     "Private hire for up to 8 passengers across Edinburgh and beyond, including airport transfers, longer journeys and bespoke tours.",

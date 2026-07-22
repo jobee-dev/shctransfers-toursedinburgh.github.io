@@ -13,7 +13,7 @@ import {
 export const metadata: Metadata = pageMetadata({
   title: "Private Hire and Airport Transfers from Edinburgh",
   description:
-    "Book Edinburgh private hire, airport transfers, longer journeys and bespoke tours for up to 8 passengers with Stevie Craig by WhatsApp.",
+    "Book Edinburgh private hire, airport transfers, longer journeys and bespoke tours for up to 8 passengers with SHC Transfers & Tours by WhatsApp.",
   path: "/",
   absoluteTitle: true,
   shareTitle: "Private Hire and Airport Transfers from Edinburgh",

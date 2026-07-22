@@ -10,7 +10,7 @@ import {
 export const metadata: Metadata = pageMetadata({
   title: "Contact & Book",
   description:
-    "Contact Stevie Craig by WhatsApp, phone or email about Edinburgh private hire, airport transfers, longer journeys or a bespoke tour.",
+    "Contact SHC Transfers & Tours by WhatsApp, phone or email about Edinburgh private hire, airport transfers, longer journeys or a bespoke tour.",
   path: "/contact",
 });
 

@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Edinburgh Airport Transfers",
   description:
-    "Arrange an Edinburgh Airport pickup or drop-off for up to 8 passengers directly with Stevie Craig.",
+    "Arrange an Edinburgh Airport pickup or drop-off for up to 8 passengers with SHC Transfers & Tours.",
   path: "/airport-transfers",
 });
 

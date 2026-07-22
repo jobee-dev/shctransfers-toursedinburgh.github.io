@@ -1,4 +1,4 @@
-# Stevie Craig Private Hires and Tours
+# SHC Transfers & Tours
 
 Five-page website for Edinburgh private hire, airport transfers, longer journeys and bespoke tours.
 

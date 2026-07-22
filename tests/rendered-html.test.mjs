@@ -11,25 +11,25 @@ const routes = [
   ],
   [
     "/private-hire",
-    "Private Hire in Edinburgh and Beyond | Stevie Craig",
+    "Private Hire in Edinburgh and Beyond | SHC Transfers &amp; Tours",
     "Private hire in Edinburgh",
     "Hi Stevie, I'd like to arrange private hire.",
   ],
   [
     "/airport-transfers",
-    "Edinburgh Airport Transfers | Stevie Craig",
+    "Edinburgh Airport Transfers | SHC Transfers &amp; Tours",
     "Edinburgh Airport pickups",
     "Hi Stevie, I'd like to arrange an airport transfer.",
   ],
   [
     "/tours",
-    "Private Tours from Edinburgh | Stevie Craig",
+    "Private Tours from Edinburgh | SHC Transfers &amp; Tours",
     "Private tours from Edinburgh",
     "Hi Stevie, I'd like to discuss a private tour.",
   ],
   [
     "/contact",
-    "Contact &amp; Book | Stevie Craig",
+    "Contact &amp; Book | SHC Transfers &amp; Tours",
     "Contact Stevie",
     "Hi Stevie, I'd like to arrange a journey.",
   ],
@@ -77,6 +77,8 @@ for (const [pathname, title, heading, bookingMessage] of routes) {
     );
     assert.match(html, /Message me/i);
     assert.match(html, /up to 8 passengers/i);
+    assert.match(html, /SHC Transfers &amp; Tours/i);
+    assert.doesNotMatch(html, /Stevie Craig/i);
     assert.match(html, /data-primary-booking-cta/i);
     assert.match(html, /mobile-booking-bar/i);
     assert.match(html, /href="tel:\+447528862843"/i);
@@ -135,7 +137,7 @@ test("llms.txt describes the public services without unsupported claims", async 
     "utf8",
   );
 
-  assert.match(llms, /^# Stevie Craig Private Hires and Tours$/m);
+  assert.match(llms, /^# SHC Transfers & Tours$/m);
   assert.match(llms, /https:\/\/shctransfers-toursedinburgh\.com\/private-hire\//i);
   assert.match(llms, /https:\/\/shctransfers-toursedinburgh\.com\/airport-transfers\//i);
   assert.match(llms, /https:\/\/shctransfers-toursedinburgh\.com\/tours\//i);

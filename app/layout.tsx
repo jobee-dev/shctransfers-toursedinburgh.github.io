@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(`${siteConfig.origin}/`),
   title: {
     default: "Private Hire and Airport Transfers from Edinburgh",
-    template: "%s | Stevie Craig",
+    template: "%s | SHC Transfers & Tours",
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
