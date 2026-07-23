@@ -8,7 +8,7 @@ import {
 } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Contact & Book",
+  title: "Contact & Book Edinburgh Private Hire",
   description:
     "Contact SHC Transfers & Tours by WhatsApp, phone or email about Edinburgh private hire, airport transfers, longer journeys or a bespoke tour.",
   path: "/contact",

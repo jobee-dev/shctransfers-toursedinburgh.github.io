@@ -98,8 +98,8 @@ export default function Home() {
             Edinburgh · Airport transfers · Tours
           </p>
           <h1>
-            Private hire across
-            <br /> Edinburgh and beyond.
+            Airport transfers and tours,
+            <br /> across Edinburgh and beyond.
           </h1>
           <p className="home-hero__intro">
             Local journeys, Edinburgh Airport transfers, longer-distance

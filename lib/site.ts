@@ -175,15 +175,44 @@ export function structuredData(faqs: readonly StructuredDataFaq[] = []) {
   const organizationId = `${homeUrl}#organization`;
   const serviceId = `${homeUrl}#taxi-service`;
   const websiteId = `${homeUrl}#website`;
+  const areaServed = [
+    { "@type": "City", name: "Edinburgh" },
+    { "@type": "City", name: "Glasgow" },
+    { "@type": "AdministrativeArea", name: "Central Belt, Scotland" },
+  ];
   const graph: Record<string, unknown>[] = [
     {
-      "@type": "Organization",
+      "@type": ["Organization", "LocalBusiness"],
       "@id": organizationId,
       name: siteConfig.name,
       url: homeUrl,
       description: siteConfig.description,
+      logo: siteUrl("/icon.svg"),
+      image: siteUrl("/og.jpg"),
       telephone: `+${siteConfig.whatsappNumber}`,
       email: siteConfig.email,
+      priceRange: "£",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Edinburgh",
+        addressRegion: "Scotland",
+        addressCountry: "GB",
+      },
+      areaServed,
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        opens: "00:00",
+        closes: "23:59",
+      },
       contactPoint: {
         "@type": "ContactPoint",
         telephone: `+${siteConfig.whatsappNumber}`,
@@ -202,16 +231,8 @@ export function structuredData(faqs: readonly StructuredDataFaq[] = []) {
       description: siteConfig.description,
       telephone: `+${siteConfig.whatsappNumber}`,
       email: siteConfig.email,
-      areaServed: [
-        {
-          "@type": "City",
-          name: "Edinburgh",
-        },
-        {
-          "@type": "AdministrativeArea",
-          name: "Scotland",
-        },
-      ],
+      priceRange: "£",
+      areaServed,
       serviceType: [
         "Private hire",
         "Edinburgh Airport transfers",
