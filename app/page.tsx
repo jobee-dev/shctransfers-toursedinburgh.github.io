@@ -11,12 +11,12 @@ import {
 } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Private Hire and Airport Transfers from Edinburgh",
+  title: "Edinburgh Airport Transfers & Private Hire | SHC Transfers & Tours",
   description:
     "Book Edinburgh private hire, airport transfers, longer journeys and bespoke tours for up to 8 passengers with SHC Transfers & Tours by WhatsApp.",
   path: "/",
   absoluteTitle: true,
-  shareTitle: "Private Hire and Airport Transfers from Edinburgh",
+  shareTitle: "Edinburgh Airport Transfers & Private Hire",
   shareImagePath: "/og-edinburgh-private-hire.jpg",
   shareImageAlt:
     "View over Edinburgh towards Arthur's Seat in warm evening light",
