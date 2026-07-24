@@ -38,7 +38,7 @@ const hasWhatsAppNumber = /^\d{8,15}$/.test(configuredWhatsApp);
 export const siteConfig = {
   name: "SHC Transfers & Tours",
   shortName: "SHC Transfers & Tours",
-  descriptor: "Private Hires & Tours",
+  descriptor: "Airport Transfers & Tours",
   description:
     "Private hire for up to 8 passengers across Edinburgh and beyond, including airport transfers, longer journeys and bespoke tours.",
   origin,

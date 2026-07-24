@@ -79,7 +79,7 @@ function Brand() {
   return (
     <Link href="/" className="brand" aria-label={`${siteConfig.name}, home`}>
       <span className="brand__name">{siteConfig.shortName}</span>
-      <span className="brand__descriptor">Private Hires &amp; Tours</span>
+      <span className="brand__descriptor">Airport Transfers &amp; Tours</span>
     </Link>
   );
 }
