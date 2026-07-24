@@ -18,7 +18,7 @@ const routes = [
   [
     "/airport-transfers",
     "Edinburgh Airport Transfers | SHC Transfers &amp; Tours",
-    "Edinburgh Airport pickups",
+    "Edinburgh Airport transfers for up to 8 passengers",
     "Hi Stevie, I'd like to arrange an airport transfer.",
   ],
   [
@@ -29,7 +29,7 @@ const routes = [
   ],
   [
     "/contact",
-    "Contact &amp; Book | SHC Transfers &amp; Tours",
+    "Contact &amp; Book Edinburgh Private Hire | SHC Transfers &amp; Tours",
     "Contact Stevie",
     "Hi Stevie, I'd like to arrange a journey.",
   ],
@@ -175,4 +175,35 @@ test("home includes truthful service structured data", async () => {
   assert.match(html, /Edinburgh/);
   assert.match(html, /shctransfers\\u002etours@gmail\\u002ecom|shctransfers\.tours@gmail\.com/i);
   assert.doesNotMatch(html, /aggregateRating|priceRange|openingHours/i);
+});
+
+test("airport transfer page targets the primary query with complete truthful content", async () => {
+  const response = await render("/airport-transfers");
+  const html = await response.text();
+
+  assert.match(
+    html,
+    /<title>Edinburgh Airport Transfers \| SHC Transfers &amp; Tours<\/title>/i,
+  );
+  assert.match(
+    html,
+    /<meta name="description" content="Pre-book Edinburgh Airport transfers for up to 8 passengers\./i,
+  );
+  assert.match(html, /<h1>Edinburgh Airport transfers for up to 8 passengers\.<\/h1>/i);
+  assert.match(html, /BreadcrumbList/);
+  assert.match(html, /"@type":"Service"/);
+  assert.match(html, /FAQPage/);
+  assert.match(html, /walk-up Edinburgh Airport taxi/i);
+  assert.match(html, /Edinburgh Airport’s current taxi and private-hire guidance/i);
+  assert.doesNotMatch(
+    html,
+    /24\/7|flight tracking|meet and greet|fixed price|licensed|guaranteed/i,
+  );
+});
+
+test("favicon metadata does not render an invalid object URL", async () => {
+  const response = await render("/");
+  const html = await response.text();
+
+  assert.doesNotMatch(html, /\[object%20Object\]/i);
 });

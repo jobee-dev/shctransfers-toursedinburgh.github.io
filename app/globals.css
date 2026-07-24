@@ -387,6 +387,21 @@ summary {
   border-bottom: 1px solid var(--line);
 }
 
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding-block: 0.85rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.breadcrumb a {
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
 .page-hero__copy {
   max-width: 40rem;
   display: flex;
@@ -461,6 +476,34 @@ summary {
 
 .two-column-copy .lead {
   color: var(--ink);
+}
+
+.airport-guidance .two-column-copy h3 {
+  margin: 0 0 0.7rem;
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  font-weight: 400;
+}
+
+.airport-guidance .two-column-copy p {
+  color: var(--muted);
+}
+
+.airport-guidance__note {
+  max-width: 48rem;
+  margin: 2.5rem 0 0;
+  padding: 1.15rem 1.25rem;
+  background: var(--stone);
+  border-left: 3px solid var(--gold);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.airport-guidance__note a {
+  color: var(--ink);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
 }
 
 .detail-list,

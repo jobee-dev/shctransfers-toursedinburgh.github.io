@@ -5,7 +5,7 @@
 ## Services
 
 - [Private hire](https://shctransfers-toursedinburgh.com/private-hire/): Pre-arranged journeys across Edinburgh and longer trips beyond the city.
-- [Airport transfers](https://shctransfers-toursedinburgh.com/airport-transfers/): Edinburgh Airport pickups and drop-offs arranged directly in advance.
+- [Edinburgh Airport transfers](https://shctransfers-toursedinburgh.com/airport-transfers/): Pre-booked private hire pickups and drop-offs for up to 8 passengers, arranged directly with Stevie in advance.
 - [Bespoke tours](https://shctransfers-toursedinburgh.com/tours/): Private tours from Edinburgh shaped around the passenger's interests, pace and available time.
 
 ## Booking and contact
@@ -18,5 +18,6 @@
 
 - Journeys must be arranged in advance.
 - The vehicle can carry up to 8 passengers.
+- Airport pickup and drop-off details are agreed directly before travel.
 - Availability, pricing and journey details are confirmed directly with Stevie.
 - Only information published on this website should be treated as current.

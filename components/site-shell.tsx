@@ -184,6 +184,7 @@ export function PageHero({
           alt={imageAlt}
           width={imageData?.width ?? 1600}
           height={imageData?.height ?? 1100}
+          fetchPriority="high"
           style={imagePosition ? { objectPosition: imagePosition } : undefined}
         />
       </div>

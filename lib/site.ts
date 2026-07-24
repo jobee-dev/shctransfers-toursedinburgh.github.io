@@ -175,11 +175,7 @@ export function structuredData(faqs: readonly StructuredDataFaq[] = []) {
   const organizationId = `${homeUrl}#organization`;
   const serviceId = `${homeUrl}#taxi-service`;
   const websiteId = `${homeUrl}#website`;
-  const areaServed = [
-    { "@type": "City", name: "Edinburgh" },
-    { "@type": "City", name: "Glasgow" },
-    { "@type": "AdministrativeArea", name: "Central Belt, Scotland" },
-  ];
+  const areaServed = { "@type": "City", name: "Edinburgh" };
   const graph: Record<string, unknown>[] = [
     {
       "@type": ["Organization", "LocalBusiness"],
@@ -191,7 +187,6 @@ export function structuredData(faqs: readonly StructuredDataFaq[] = []) {
       image: siteUrl("/og.jpg"),
       telephone: `+${siteConfig.whatsappNumber}`,
       email: siteConfig.email,
-      priceRange: "£",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Edinburgh",
@@ -199,20 +194,6 @@ export function structuredData(faqs: readonly StructuredDataFaq[] = []) {
         addressCountry: "GB",
       },
       areaServed,
-      openingHoursSpecification: {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday",
-        ],
-        opens: "00:00",
-        closes: "23:59",
-      },
       contactPoint: {
         "@type": "ContactPoint",
         telephone: `+${siteConfig.whatsappNumber}`,
@@ -231,7 +212,6 @@ export function structuredData(faqs: readonly StructuredDataFaq[] = []) {
       description: siteConfig.description,
       telephone: `+${siteConfig.whatsappNumber}`,
       email: siteConfig.email,
-      priceRange: "£",
       areaServed,
       serviceType: [
         "Private hire",
@@ -257,6 +237,97 @@ export function structuredData(faqs: readonly StructuredDataFaq[] = []) {
     graph.push({
       "@type": "FAQPage",
       "@id": `${homeUrl}#frequently-asked-questions`,
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    });
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": graph,
+  };
+}
+
+type ServiceStructuredDataInput = {
+  path: `/${string}`;
+  name: string;
+  description: string;
+  serviceType: string;
+  faqs?: readonly StructuredDataFaq[];
+};
+
+export function serviceStructuredData({
+  path,
+  name,
+  description,
+  serviceType,
+  faqs = [],
+}: ServiceStructuredDataInput) {
+  const homeUrl = sitePageUrl("/");
+  const pageUrl = sitePageUrl(path);
+  const organizationId = `${homeUrl}#organization`;
+  const serviceId = `${pageUrl}#service`;
+  const graph: Record<string, unknown>[] = [
+    {
+      "@type": "Service",
+      "@id": serviceId,
+      name,
+      url: pageUrl,
+      description,
+      serviceType,
+      provider: { "@id": organizationId },
+      areaServed: { "@type": "City", name: "Edinburgh" },
+      audience: {
+        "@type": "Audience",
+        audienceType: "Airport passengers and private groups",
+      },
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${pageUrl}#webpage`,
+      url: pageUrl,
+      name,
+      description,
+      isPartOf: { "@id": `${homeUrl}#website` },
+      about: { "@id": serviceId },
+      primaryImageOfPage: {
+        "@type": "ImageObject",
+        url: siteUrl("/og-edinburgh-airport-transfers.jpg"),
+        width: 1200,
+        height: 630,
+      },
+      inLanguage: "en-GB",
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${pageUrl}#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: homeUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name,
+          item: pageUrl,
+        },
+      ],
+    },
+  ];
+
+  if (faqs.length > 0) {
+    graph.push({
+      "@type": "FAQPage",
+      "@id": `${pageUrl}#frequently-asked-questions`,
       mainEntity: faqs.map((faq) => ({
         "@type": "Question",
         name: faq.question,

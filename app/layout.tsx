@@ -18,7 +18,6 @@ export const metadata: Metadata = {
   category: "Private hire and tourism",
   icons: {
     icon: [{ url: siteUrl("/icon.svg"), type: "image/svg+xml" }],
-    shortcut: [{ url: siteUrl("/icon.svg"), type: "image/svg+xml" }],
     apple: siteUrl("/apple-icon.png"),
   },
 };
